@@ -1,0 +1,8 @@
+- hosts: localhost
+  gather_facts: no
+  connection: local
+  
+  tasks:
+  - name: INCLUDE UNIQUE USERNAME FROM REGISTER.YML
+    include_vars:
+      file: username_info.yml
