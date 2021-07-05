@@ -1,8 +1,31 @@
 - hosts: localhost
   gather_facts: no
   connection: local
+  vars_prompt:
+
+    - name: apiKey
+      prompt: What is your Porkbun API Key (not secret key)?
+      private: yes
+
+    - name: secretKey
+      prompt: What is your Porkbun Secret Key?
+      private: yes
   
   tasks:
-  - name: INCLUDE UNIQUE USERNAME FROM REGISTER.YML
+  - name: Include Secrets File
     include_vars:
-      file: username_info.yml
+      file: secrets.yml
+
+  - name: Populate API Key
+    replace:
+      path: porkbun-DDNS/secrets.js
+      regexp: 'pbAPIKey'
+      replace: "{{ apiKey }}"
+
+  - name: Populate Secret Key 
+    replace:
+      path: porkbun-DDNS/secrets.js
+      regexp: 'pbSecKey'
+      replace: "{{ secretKey }}"
+
+  
