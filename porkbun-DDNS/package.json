@@ -9,6 +9,8 @@
     },
     "dependencies": {
         "express": "^4.16.1",
-        "public-ip": "^4.0.4"
+        "public-ip": "^4.0.4",
+        "axios": "^0.21.1",
+        "node-cron": "^3.0.0"
     }
 }
