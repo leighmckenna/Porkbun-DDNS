@@ -1,2 +1,2 @@
-export const apiKey = pbAPIKey;
-export const secKey = pbSecKey;
+export const DNSAPIKey = pbAPIKey;
+export const DNSSecKey = pbSecKey;
