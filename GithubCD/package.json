@@ -1,0 +1,15 @@
+{
+    "name": "github-cd-automation",
+    "version": "1.0.0",
+    "description": "expressjs server running in a docker container",
+    "author": "Leigh McKenna",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.16.1",
+        "axios": "^0.21.1"
+    }
+}
