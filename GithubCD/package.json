@@ -9,7 +9,9 @@
         "start": "node server.js"
     },
     "dependencies": {
-        "express": "^4.16.1",
-        "axios": "^0.21.1"
+        "axios": "^0.21.1",
+        "body-parser": "^1.19.0",
+        "childprocess": "^2.0.2",
+        "express": "^4.16.1"
     }
 }
