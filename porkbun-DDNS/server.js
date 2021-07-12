@@ -35,6 +35,7 @@ cron.schedule('* * * * *', async function() {
                     recordId = recordArr[i].id;
                 }
             }
+            console.log(recordId);
             if (recordId != "") {
                 //update record
                 axios.post('https://porkbun.com/api/json/v3/dns/edit/' + domain + '/' + recordId, {
@@ -48,7 +49,7 @@ cron.schedule('* * * * *', async function() {
                     console.log("Record updated at: " + new Date().getTime());
                 }).catch(error => {
                     console.error(error)
-                })
+                });
             }
             else {
                 axios.post('https://porkbun.com/api/json/v3/dns/create/' + domain, {
@@ -62,7 +63,7 @@ cron.schedule('* * * * *', async function() {
                     console.log("Record updated at: " + new Date().getTime());
                 }).catch(error => {
                     console.error(error)
-                })
+                });
             }
 
         }).catch(error => {
