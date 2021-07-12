@@ -10,6 +10,14 @@
     - name: secretKey
       prompt: What is your Porkbun Secret Key?
       private: yes
+
+    - name: localDir
+      prompt: What location should we pull new changes at? (relative paths are safe)
+      private: no
+
+    - name: startCmd
+      prompt: What command should be run to start the process?
+      private: no
   
   tasks:
   - name: Include Secrets File
@@ -27,5 +35,18 @@
       path: porkbun-DDNS/secrets.js
       regexp: 'pbSecKey'
       replace: "{{ secretKey }}"
+
+  - name: Populate Secret Key 
+    replace:
+      path: GithubCD/config.js
+      regexp: 'localGitDir'
+      replace: "{{ localDir }}"
+
+  - name: Populate Secret Key 
+    replace:
+      path: GithubCD/config.js
+      regexp: 'startCMD'
+      replace: "{{ startCmd }}"
+
 
   

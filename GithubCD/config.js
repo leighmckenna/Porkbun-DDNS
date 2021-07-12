@@ -1,2 +1,2 @@
-export const repoUrl = pbAPIKey;
-export const DNSSecKey = pbSecKey;
+export const workingDirectory = localGitDir;
+export const startCommand = "startCMD";
