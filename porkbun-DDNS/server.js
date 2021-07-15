@@ -1,4 +1,4 @@
-import { DNSAPIKey, DNSSecKey } from './secrets.js';
+import { DNSAPIKey, DNSSecKey, domain, subdomain } from './config.js';
 import * as publicIp from 'public-ip';
 import express from 'express';
 import cron from 'node-cron';
@@ -8,8 +8,6 @@ import axios from 'axios';
 const PORT = 8080;
 const HOST = '0.0.0.0';
 const timeoutValue = 600;
-const subdomain = "picicd"
-const domain = "cael.tech"
 
 // App
 const app = express();
