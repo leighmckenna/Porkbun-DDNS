@@ -11,6 +11,14 @@
       prompt: What is your Porkbun Secret Key?
       private: yes
 
+    - name: domain
+      prompt: What is the domain name this change will be applied to?
+      private: no
+
+    - name: subdomain
+      prompt: What is the subdomain this change will be applied to?
+      private: no
+
     - name: localDir
       prompt: What location should we pull new changes at? (relative paths are safe)
       private: no
@@ -26,15 +34,27 @@
 
   - name: Populate API Key
     replace:
-      path: porkbun-DDNS/secrets.js
+      path: porkbun-DDNS/config.js
       regexp: 'pbAPIKey'
       replace: "{{ apiKey }}"
 
   - name: Populate Secret Key 
     replace:
-      path: porkbun-DDNS/secrets.js
+      path: porkbun-DDNS/config.js
       regexp: 'pbSecKey'
       replace: "{{ secretKey }}"
+
+  - name: Populate Domain
+    replace:
+      path: porkbun-DDNS/config.js
+      regexp: 'domainName'
+      replace: "{{ domain }}"
+
+  - name: Populate Subdomain 
+    replace:
+      path: porkbun-DDNS/config.js
+      regexp: 'subdomainName'
+      replace: "{{ subdomain }}"
 
   - name: Populate Secret Key 
     replace:
