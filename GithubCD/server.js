@@ -1,6 +1,6 @@
 import bodyParser  from 'body-parser';
 import express from 'express';
-import {workingDirectory, startCommand} from './config';
+import {workingDirectory, startCommand} from './config.js';
 
 const router = express.Router();
 const app = express();
