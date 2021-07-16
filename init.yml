@@ -56,13 +56,13 @@
       regexp: 'subdomainName'
       replace: "{{ subdomain }}"
 
-  - name: Populate Secret Key 
+  - name: Populate Git Directory
     replace:
       path: GithubCD/config.js
       regexp: 'localGitDir'
       replace: "{{ localDir }}"
 
-  - name: Populate Secret Key 
+  - name: Populate Start Command 
     replace:
       path: GithubCD/config.js
       regexp: 'startCMD'
