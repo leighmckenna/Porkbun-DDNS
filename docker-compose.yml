@@ -1,8 +1,0 @@
-version: "3.9"  # optional since v1.27.0
-services:
-  githubcd:
-    build: ./GithubCD
-    command: "node server.js"
-  porkbunddns:
-    build: ./Porkbun-DDNS
-    command: "node server.js"

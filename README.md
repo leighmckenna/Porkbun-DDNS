@@ -1,23 +1,8 @@
-# Raspberry Pi CI/CD Tools
+# Porkbun DDNS
 
 ## Overview
 
-This is a collection of tools I personally use for my personal Raspberry Pi CI/CD pipeline. Currently, it has been broken into two parts: a webhook activated container that pulls new code from Github and a nodecron based container that continuiously updates a DNS record on my prefered registrar, Porkbun.
-
-Both Docker containers are populated via an Ansible Playbook (init.yml) and can be started easily utilizing a docker compose file. 
-
-## Setup/Use
-
-Requirements:
-* Docker & Docker Compose
-* Ansible (optional, but do you really want to configure by hand?)
-* Git w/ a valid SSH key populated
-* A domain managed by Porkbun
-
-Instructions:
-1. `sudo ansible-playbook init.yml`
-2. `sudo docker compose build`
-3. `sudo docker compose up`
+This is a simple tool built in JavaScript that works as a DDNS system using Porkbun's API access. While it's currently built in JS, it will be migrated to rust for long term use.
 
 ## License
 
