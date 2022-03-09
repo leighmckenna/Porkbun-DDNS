@@ -2,7 +2,18 @@
 
 ## Overview
 
-This is a simple tool built in JavaScript that works as a DDNS system using Porkbun's API access. While it's currently built in JS, it will be migrated to rust for long term use.
+This is a quick tool built in Rust to run in a cronjob to update my DNS records on Porkbun. A previous version was built in JS and has been swapped over for ease of use on my server.
+
+## Reqs
+
+* cron
+* Rust/Cargo
+
+## Setup
+
+1. Insert your API keys in the relevant constants in src/main.rs along with your relevant domain
+2. Compile for your machine using the apropriate `cargo build --target` command.
+3. Utilize `crontab -e` to schedule the executable to run every 5 minutes (*/5 * * * *)
 
 ## License
 
