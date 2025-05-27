@@ -15,8 +15,6 @@ This is a quick tool built in Rust to run in a cronjob to update my DNS records 
 2. Compile for your machine using the apropriate `cargo build --target` command.
 3. Utilize `crontab -e` to schedule the executable to run every 5 minutes (*/5 * * * *)
 
-[![Leigh's GitHub stats](https://github-readme-stats.vercel.app/api?username=leighmckenna)](https://github.com/anuraghazra/github-readme-stats)
-
 ## License
 
 Copyright © 2021 Leigh McKenna
